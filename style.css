@@ -1,0 +1,302 @@
+/* General */
+
+body {
+background-color: #FFF8F0 !important; /* flora/ white */
+/*background-color: #F0F7FF !important;/*ghost white */
+/*background-color:  #b4fbf9; /*tiffany blue */
+color:#34282C;
+
+}
+.homepage-logo {
+  width: 20%;
+  margin-left: 35px;
+  margin-top: 5px;
+}
+nav ul li {
+  font-family: 'Droid Sans', sans-serif;
+  list-style-type: none;
+  float: right;
+  padding: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+nav ul li a {
+  text-decoration: none !important;
+  color: #34282C;
+}
+
+a:hover {
+  color: #EF3F6B !important;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+/* Homepage */
+.homepage-introduction-text, .introduction-text {
+  font-family: 'Droid Serif', serif;
+  float: left;
+  font-size: 50px;
+  font-weight: 900;
+  width: 95%;
+  /*padding: 85px;*/
+  padding-bottom: 60px;
+  margin-top: 150px;
+}
+
+.strikeout {
+  text-decoration: line-through;
+}
+
+.contact-icons {
+  display: table;
+  width: 36%;
+  margin: 20px auto;
+
+}
+
+.contact-icons a {
+  display: table-cell;
+  text-align: center;
+  width: 6%;
+}
+.contact-icons img {
+  max-width: 35%;
+  opacity: 0.7;
+}
+
+/*About Me*/
+.sub-title {
+  font-family: 'Droid Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.profile-text, .project-text {
+  font-family: 'Droid Serif', serif;
+  font-size: 20px;
+}
+.profile-photo img {
+  margin-top: -220px;
+  margin-left: 40px;
+}
+.profile-photo img, .project-photo img {
+  width: 75%;
+  opacity: 0.9;
+}
+.profile-photo img:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border: 1px solid #c0a062;
+  position: absolute;
+  left: -20px;
+  bottom: -40px;
+}
+.about-subtitle {
+  color: #EF3F6B;
+}
+.shadow-box {
+  height: 262px;
+  width: 393px;
+  border: solid 0.8px #EF3F6B;
+}
+.shadow-box-about {
+  height: 262px;
+  width: 393px;
+  border: solid 0.8px #EF3F6B;
+}
+/* Work */
+.project-photo, .project-text, .sub-title {
+  opacity: 0;
+}
+.project-row {
+  padding-bottom: 170px;
+}
+
+.project-text ul li {
+  list-style-type: none;
+}
+.project-text ul li a {
+  color: #EF3F6B;
+  text-decoration: none;
+}
+.project-photo img {
+  -webkit-transition: all 1s ease;
+   -moz-transition: all 1s ease;
+     -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+        transition: all 1s ease;
+}
+.project-photo img:hover {
+  -webkit-transform: rotate(-10deg);
+   -moz-transform: rotate(-10deg);
+     -o-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+}
+
+.project-text ul li a:hover {
+
+}
+
+/* MENU TEST */
+/**
+ * Menu overview.
+ */
+.c-menu {
+  position: fixed;
+  z-index: 200;
+  background-color: #67b5d1;
+  transition: transform 0.3s;
+}
+
+.c-menu__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Close button resets.
+ */
+.c-menu__close {
+  color: #fff;
+  background-color: #3184a1;
+  font-size: 14px;
+  border: none;
+  box-shadow: none;
+  border-radius: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+/**
+ * Close button resets.
+ */
+.c-menu__close:focus {
+  outline: none;
+}
+
+/**
+ * Body states.
+ *
+ * When a menu is active, we want to hide the overflows on the body to prevent
+ * awkward document scrolling.
+ */
+body.has-active-menu {
+  overflow: hidden;
+}
+
+/**
+ * Mask component
+ */
+
+.c-mask {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
+}
+
+.c-mask.is-active {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.c-menu--slide-left,
+.c-menu--slide-right,
+.c-menu--push-left,
+.c-menu--push-right {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+@media all and (min-width: 320px) {
+  .c-menu--slide-left,
+  .c-menu--slide-right,
+  .c-menu--push-left,
+  .c-menu--push-right {
+    width: 300px;
+  }
+}
+
+.c-menu--slide-left .c-menu__item,
+.c-menu--slide-right .c-menu__item,
+.c-menu--push-left .c-menu__item,
+.c-menu--push-right .c-menu__item {
+  display: block;
+  text-align: center;
+  border-top: solid 1px #b5dbe9;
+  border-bottom: solid 1px #3184a1;
+}
+
+.c-menu--slide-left .c-menu__item:first-child,
+.c-menu--slide-right .c-menu__item:first-child,
+.c-menu--push-left .c-menu__item:first-child,
+.c-menu--push-right .c-menu__item:first-child {
+  border-top: none;
+}
+
+.c-menu--slide-left .c-menu__item:last-child,
+.c-menu--slide-right .c-menu__item:last-child,
+.c-menu--push-left .c-menu__item:last-child,
+.c-menu--push-right .c-menu__item:last-child {
+  border-bottom: none;
+}
+
+.c-menu--slide-left .c-menu__link,
+.c-menu--slide-right .c-menu__link,
+.c-menu--push-left .c-menu__link,
+.c-menu--push-right .c-menu__link {
+  display: block;
+  padding: 12px 24px;
+  color: #fff;
+}
+
+.c-menu--slide-left .c-menu__close,
+.c-menu--slide-right .c-menu__close,
+.c-menu--push-left .c-menu__close,
+.c-menu--push-right .c-menu__close {
+  display: block;
+  padding: 12px 24px;
+  width: 100%;
+}
+.c-menu--slide-right,
+.c-menu--push-right {
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+}
+
+@media all and (min-width: 320px) {
+  .c-menu--slide-right,
+  .c-menu--push-right {
+    transform: translateX(300px);
+  }
+}
+
+.c-menu--slide-right.is-active,
+.c-menu--push-right.is-active {
+  transform: translateX(0);
+}
+.o-wrapper.has-push-right {
+  transform: translateX(-100%);
+}
+
+@media all and (min-width: 320px) {
+  .o-wrapper.has-push-right {
+    transform: translateX(-300px);
+  }
+}
